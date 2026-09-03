@@ -17,6 +17,7 @@ V1 to V28
 Amount
 Class
 Data set link:  https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud⁠�
+
 Class:
 0 → Normal transaction
 1 → Fraudulent transaction
