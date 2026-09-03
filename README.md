@@ -21,7 +21,7 @@ Time
 V1 to V28
 Amount
 Class
-
+_ _ _
 
 Data set link:  https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud⁠�
 _ _ _
@@ -36,11 +36,17 @@ _ _ _
 Technologies Used:
 
 Python
+
 Pandas
+
 NumPy
+
 Matplotlib
+
 Seaborn
+
 Scikit-learn
+
 Jupyter Notebook
 
 _ _ _ 
@@ -49,67 +55,67 @@ Methodology:
 
 1. Data Understanding
    
-Loaded the dataset
+ Loaded the dataset
 
-Checked dataset shape
+ Checked dataset shape
 
-Examined column names and data types
+ Examined column names and data types
 
-Checked missing values
+ Checked missing values
 
-Analyzed the distribution of the Class column
+ Analyzed the distribution of the Class column
 
 2. Data Preprocessing
  
- Removed Time from the clustering features
+  Removed Time from the clustering features
  
- Removed Class from the training data
+  Removed Class from the training data
  
- Selected V1 to V28 and Amount
+  Selected V1 to V28 and Amount
  
- Applied StandardScaler for feature scaling
+  Applied StandardScaler for feature scaling
 
 3. K-Means Clustering
    
- Used the Elbow Method to determine the number of clusters
+  Used the Elbow Method to determine the number of clusters
  
- Selected K = 4
+  Selected K = 4
  
- Trained the K-Means clustering model
+  Trained the K-Means clustering model
  
- Assigned each transaction to a cluster
+  Assigned each transaction to a cluster
 
 4. Anomaly Detection
 
- Calculated the distance of each transaction from its assigned cluster centroid
+  Calculated the distance of each transaction from its assigned cluster centroid
  
- Used the 99th percentile as the anomaly threshold
+  Used the 99th percentile as the anomaly threshold
  
- Identified the top 1% farthest transactions as anomalies
+  Identified the top 1% farthest transactions as anomalies
 
 5. Evaluation
  
- The detected anomalies were compared with the actual fraud labels using:
+  The detected anomalies were compared with the actual fraud labels using:
  
- Confusion Matrix
+  Confusion Matrix
  
- Precision
+  Precision
  
- Recall
+  Recall
 
 6. Visualization
 
-PCA was used to reduce the features to two dimensions.
+ PCA was used to reduce the features to two dimensions.
 
-Visualizations include:
+ Visualizations include:
 
- Elbow Method
+  Elbow Method
  
- K-Means Clusters
+  K-Means Clusters
  
- Anomalies vs Normal Transactions
+  Anomalies vs Normal Transactions
  
- Confusion Matrix
+  Confusion Matrix
 _ _ _ 
 
 Evaluation Metrics:
