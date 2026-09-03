@@ -10,6 +10,7 @@ _ _ _
 Objective:
 
 To use K-Means clustering to identify anomalous credit card transactions and evaluate how well the detected anomalies match the actual fraudulent transactions.
+_ _ _
 
 Dataset:
 
@@ -21,13 +22,16 @@ V1 to V28
 Amount
 Class
 
+
 Data set link:  https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud⁠�
+_ _ _
 
 Class:
 
 0 → Normal transaction
 1 → Fraudulent transaction
 The dataset is highly imbalanced because fraudulent transactions are very rare.
+_ _ _
 
 Technologies Used:
 
@@ -39,55 +43,77 @@ Seaborn
 Scikit-learn
 Jupyter Notebook
 
+_ _ _ 
+
 Methodology:
 
 1. Data Understanding
    
-*Loaded the dataset
-*Checked dataset shape
-*Examined column names and data types
-*Checked missing values
-*Analyzed the distribution of the Class column
+Loaded the dataset
+
+Checked dataset shape
+
+Examined column names and data types
+
+Checked missing values
+
+Analyzed the distribution of the Class column
 
 2. Data Preprocessing
  
- *Removed Time from the clustering features
- *Removed Class from the training data
- *Selected V1 to V28 and Amount
- *Applied StandardScaler for feature scaling
+ Removed Time from the clustering features
+ 
+ Removed Class from the training data
+ 
+ Selected V1 to V28 and Amount
+ 
+ Applied StandardScaler for feature scaling
 
 3. K-Means Clustering
    
  Used the Elbow Method to determine the number of clusters
+ 
  Selected K = 4
+ 
  Trained the K-Means clustering model
+ 
  Assigned each transaction to a cluster
 
 4. Anomaly Detection
 
- *Calculated the distance of each transaction from its assigned cluster centroid
- *Used the 99th percentile as the anomaly threshold
- *Identified the top 1% farthest transactions as anomalies
+ Calculated the distance of each transaction from its assigned cluster centroid
+ 
+ Used the 99th percentile as the anomaly threshold
+ 
+ Identified the top 1% farthest transactions as anomalies
 
 5. Evaluation
  
  The detected anomalies were compared with the actual fraud labels using:
  
  Confusion Matrix
+ 
  Precision
+ 
  Recall
 
 6. Visualization
+
 PCA was used to reduce the features to two dimensions.
 
 Visualizations include:
 
  Elbow Method
- K-Means Clusters
- Anomalies vs Normal Transactions
- Confusion Matrix
  
-Evaluation Metrics
+ K-Means Clusters
+ 
+ Anomalies vs Normal Transactions
+ 
+ Confusion Matrix
+_ _ _ 
+
+Evaluation Metrics:
+
 
  Precision:
  
@@ -97,15 +123,25 @@ Recall:
 
 Recall measures how many of the actual fraudulent transactions were successfully detected as anomalies.
 
+_ _ _
+
 Key Insights:
 
- *The dataset is highly imbalanced.
- *Fraudulent transactions represent only a very small portion of the dataset.
- *K-Means was applied without using the Class column during training.
- *Transactions farther from their cluster centroids were considered more likely to be anomalous.
- *The top 1% farthest transactions were classified as anomalies.
- *The detected anomalies were compared with actual fraud cases using Precision, Recall, and a Confusion Matrix.
- *PCA helped visualize the clusters and detected anomalies in two dimensions.
+ The dataset is highly imbalanced.
+ 
+ Fraudulent transactions represent only a very small portion of the dataset.
+ 
+ K-Means was applied without using the Class column during training.
+ 
+ Transactions farther from their cluster centroids were considered more likely to be anomalous.
+ 
+ The top 1% farthest transactions were classified as anomalies.
+ 
+ The detected anomalies were compared with actual fraud cases using Precision, Recall, and a Confusion Matrix.
+ 
+ PCA helped visualize the clusters and detected anomalies in two dimensions.
+
+ _ _ _
 
    
 Conclusion:
